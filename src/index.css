@@ -154,3 +154,20 @@ html {
 img {
   background-color: hsl(var(--accent));
 }
+
+/* Firefox */
+#app-scroll {
+  scrollbar-width: none;        /* hides the bar, scrolling still works */
+  -ms-overflow-style: none;     /* old Edge / IE */
+}
+/* WebKit (Chrome, Safari, new Edge) */
+#app-scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+/* Hide body-level scrollbar (we scroll inside #app-scroll) */
+html, body {
+  overflow: hidden;
+  height: 100%;
+}

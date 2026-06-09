@@ -20,6 +20,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
+    {/* <nav className="z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm shrink-0"> */}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}

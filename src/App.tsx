@@ -23,7 +23,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Navbar />
+        {/* <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
@@ -35,7 +35,24 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
-        <FloatingWhatsApp />
+        <FloatingWhatsApp /> */}
+        <div className="h-screen flex flex-col overflow-hidden">
+          <Navbar />
+          <div id="app-scroll" className="flex-1 overflow-y-auto overflow-x-hidden">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/booking" element={<Booking />} />
+              <Route path="/testimonials" element={<Testimonials />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+            <Footer />
+          </div>
+          <FloatingWhatsApp />
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
